@@ -6,301 +6,330 @@
 
 <title>OMAKASE – Japanisches Restaurant in Aschaffenburg</title>
 
-<meta name="description" content="OMAKASE Aschaffenburg – Japanisches Restaurant mit Sushi, Sashimi und Omakase. Entdecken Sie japanische Küche in besonderer Atmosphäre.">
+<meta name="description" content="OMAKASE – Japanisches Restaurant in Aschaffenburg. Sushi, Sashimi, Ramen und japanische Spezialitäten in besonderer Atmosphäre.">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #0b0b0b;
-    color: #f5f1e8;
-    line-height: 1.6;
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#080808;
+    color:#fff;
+    line-height:1.6;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+/* NAVIGATION */
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    padding:20px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,.75);
+    backdrop-filter:blur(12px);
+}
+
+.logo{
+    font-size:27px;
+    font-weight:bold;
+    letter-spacing:5px;
+}
+
+.logo span{
+    color:#d9a441;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:28px;
+}
+
+nav a{
+    font-size:14px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#d9a441;
 }
 
 /* HERO */
-.hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 30px;
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:120px 20px 70px;
     background:
-        linear-gradient(rgba(0,0,0,.58), rgba(0,0,0,.72)),
-        url("https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=2000&q=90")
-        center/cover;
+    linear-gradient(rgba(0,0,0,.48),rgba(0,0,0,.75)),
+    url("https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=2000&q=85")
+    center/cover;
 }
 
-.hero-content {
-    max-width: 900px;
+.hero-content{
+    max-width:850px;
 }
 
-.logo {
-    font-size: 18px;
-    letter-spacing: 7px;
-    margin-bottom: 30px;
+.hero small{
+    color:#d9a441;
+    letter-spacing:5px;
+    text-transform:uppercase;
 }
 
-.hero h1 {
-    font-family: Georgia, serif;
-    font-size: clamp(60px, 12vw, 130px);
-    letter-spacing: 12px;
-    font-weight: 400;
+.hero h1{
+    font-size:clamp(55px,10vw,110px);
+    letter-spacing:12px;
+    margin:15px 0;
 }
 
-.hero p {
-    font-size: 18px;
-    letter-spacing: 4px;
-    margin: 20px 0 40px;
-    text-transform: uppercase;
+.hero p{
+    font-size:20px;
+    color:#eee;
+    margin-bottom:35px;
 }
 
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
+.btn{
+    display:inline-block;
+    padding:14px 30px;
+    border:1px solid #d9a441;
+    color:#fff;
+    margin:6px;
+    transition:.3s;
 }
 
-.btn {
-    display: inline-block;
-    padding: 15px 28px;
-    border: 1px solid #c8a96b;
-    color: white;
-    letter-spacing: 2px;
-    font-size: 13px;
-    transition: .3s;
+.btn:hover{
+    background:#d9a441;
+    color:#000;
 }
 
-.btn:hover {
-    background: #c8a96b;
-    color: #111;
-}
-
-/* NAV */
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background: rgba(10,10,10,.96);
-    border-bottom: 1px solid #292929;
-    padding: 18px;
-}
-
-.nav-inner {
-    max-width: 1100px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-logo {
-    letter-spacing: 4px;
-    font-family: Georgia, serif;
-}
-
-.nav-links {
-    display: flex;
-    gap: 28px;
-    font-size: 13px;
-    letter-spacing: 1px;
+.btn-gold{
+    background:#d9a441;
+    color:#000;
 }
 
 /* SECTIONS */
-section {
-    max-width: 1100px;
-    margin: auto;
-    padding: 100px 25px;
+section{
+    padding:100px 7%;
 }
 
-.subtitle {
-    color: #c8a96b;
-    letter-spacing: 4px;
-    font-size: 12px;
-    margin-bottom: 15px;
+.section-title{
+    text-align:center;
+    margin-bottom:55px;
 }
 
-h2 {
-    font-family: Georgia, serif;
-    font-weight: 400;
-    font-size: clamp(38px, 6vw, 65px);
-    margin-bottom: 25px;
+.section-title small{
+    color:#d9a441;
+    letter-spacing:4px;
+    text-transform:uppercase;
 }
 
-.text {
-    max-width: 700px;
-    color: #c9c5bd;
-    font-size: 17px;
+.section-title h2{
+    font-size:45px;
+    margin-top:8px;
 }
 
-/* OMakase */
-.omakase-box {
-    margin-top: 50px;
-    border: 1px solid #343434;
-    padding: 45px;
-    text-align: center;
+/* ABOUT */
+.about{
+    background:#111;
 }
 
-.omakase-box h3 {
-    font-family: Georgia, serif;
-    font-size: 35px;
-    font-weight: 400;
+.about-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
 }
 
-.price {
-    color: #c8a96b;
-    margin: 15px 0 25px;
+.about img{
+    width:100%;
+    height:480px;
+    object-fit:cover;
+}
+
+.about-text h3{
+    font-size:34px;
+    margin-bottom:20px;
+}
+
+.about-text p{
+    color:#ccc;
+    margin-bottom:18px;
 }
 
 /* MENU */
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    margin-top: 50px;
+.menu{
+    background:#080808;
 }
 
-.menu-card {
-    padding: 30px;
-    border-top: 1px solid #444;
+.menu-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
 }
 
-.menu-card h3 {
-    font-family: Georgia, serif;
-    font-size: 27px;
-    font-weight: 400;
-    margin-bottom: 20px;
+.menu-card{
+    border:1px solid #292929;
+    padding:35px 25px;
+    background:#101010;
+    transition:.3s;
 }
 
-.menu-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 9px 0;
-    color: #d4d0c8;
+.menu-card:hover{
+    transform:translateY(-6px);
+    border-color:#d9a441;
 }
 
-.menu-item span:last-child {
-    color: #c8a96b;
+.menu-card h3{
+    color:#d9a441;
+    font-size:24px;
+    margin-bottom:18px;
+}
+
+.menu-item{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    padding:12px 0;
+    border-bottom:1px solid #292929;
+}
+
+.price{
+    color:#d9a441;
+    white-space:nowrap;
 }
 
 /* GALLERY */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-top: 40px;
+.gallery{
+    background:#111;
 }
 
-.gallery img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
+.gallery-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
 }
 
-/* RESERVATION */
-.reservation {
-    text-align: center;
-    background: #111;
-    max-width: none;
+.gallery-grid img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    transition:.4s;
 }
 
-.reservation-inner {
-    max-width: 900px;
-    margin: auto;
+.gallery-grid img:hover{
+    transform:scale(1.03);
 }
 
 /* CONTACT */
-.contact {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
+.contact{
+    text-align:center;
+    background:
+    linear-gradient(rgba(0,0,0,.78),rgba(0,0,0,.9)),
+    url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2000&q=85")
+    center/cover;
 }
 
-.contact-box p {
-    margin: 8px 0;
-    color: #c9c5bd;
+.contact-box{
+    max-width:800px;
+    margin:auto;
 }
 
-.map {
-    width: 100%;
-    height: 300px;
-    border: 0;
+.contact-box h2{
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+.contact-box p{
+    color:#ddd;
+    margin:10px 0;
+}
+
+.contact-info{
+    margin:30px 0;
+    font-size:18px;
 }
 
 /* FOOTER */
-footer {
-    border-top: 1px solid #292929;
-    padding: 50px 25px;
-    text-align: center;
-    color: #aaa;
+footer{
+    background:#050505;
+    text-align:center;
+    padding:35px 20px;
+    color:#888;
 }
 
-footer .brand {
-    font-family: Georgia, serif;
-    font-size: 30px;
-    letter-spacing: 5px;
-    color: white;
-    margin-bottom: 15px;
-}
-
-.footer-links {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    font-size: 13px;
+footer strong{
+    color:#d9a441;
 }
 
 /* MOBILE */
-@media(max-width: 700px) {
+@media(max-width:800px){
 
-    .nav-links {
-        display: none;
+    nav{
+        padding:15px 20px;
     }
 
-    .hero h1 {
-        letter-spacing: 7px;
+    nav ul{
+        display:none;
     }
 
-    .hero p {
-        font-size: 12px;
-        letter-spacing: 2px;
+    .logo{
+        font-size:22px;
     }
 
-    section {
-        padding: 70px 20px;
+    section{
+        padding:75px 20px;
     }
 
-    .menu-grid,
-    .contact {
-        grid-template-columns: 1fr;
+    .about-grid{
+        grid-template-columns:1fr;
+        gap:30px;
     }
 
-    .gallery {
-        grid-template-columns: 1fr 1fr;
+    .about img{
+        height:330px;
     }
 
-    .gallery img {
-        height: 180px;
+    .menu-grid{
+        grid-template-columns:1fr;
     }
 
-    .omakase-box {
-        padding: 30px 20px;
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .gallery-grid img{
+        height:180px;
+    }
+
+    .section-title h2{
+        font-size:36px;
     }
 }
 </style>
@@ -309,273 +338,249 @@ footer .brand {
 <body>
 
 <nav>
-    <div class="nav-inner">
-        <div class="nav-logo">OMAKASE</div>
+    <div class="logo">OMA<span>KASE</span></div>
 
-        <div class="nav-links">
-            <a href="#about">ÜBER UNS</a>
-            <a href="#omakase">OMAKASE</a>
-            <a href="#menu">SPEISEKARTE</a>
-            <a href="#gallery">GALERIE</a>
-            <a href="#contact">KONTAKT</a>
-        </div>
-    </div>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Über uns</a></li>
+        <li><a href="#menu">Speisekarte</a></li>
+        <li><a href="#gallery">Galerie</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+    </ul>
 </nav>
 
-<header class="hero">
+
+<!-- HERO -->
+<section class="hero" id="home">
 
     <div class="hero-content">
 
-        <div class="logo">ASCHAFFENBURG · GERMANY</div>
+        <small>Japanisches Restaurant · Aschaffenburg</small>
 
         <h1>OMAKASE</h1>
 
-        <p>Japanese Dining Experience</p>
-
-        <div class="buttons">
-            <a class="btn" href="#menu">SPEISEKARTE</a>
-            <a class="btn" href="#reservation">RESERVIEREN</a>
-        </div>
-
-    </div>
-
-</header>
-
-<section id="about">
-
-    <div class="subtitle">WILLKOMMEN</div>
-
-    <h2>Japanische Küche.</h2>
-
-    <p class="text">
-        Willkommen bei OMAKASE in Aschaffenburg.
-        Entdecken Sie hochwertiges Sushi, frische Zutaten
-        und japanische Küche in einer modernen Atmosphäre.
-        Unser Anspruch ist einfach: Qualität, Frische und
-        ein besonderes kulinarisches Erlebnis.
-    </p>
-
-</section>
-
-<section id="omakase">
-
-    <div class="subtitle">CHEF'S SELECTION</div>
-
-    <h2>OMAKASE EXPERIENCE</h2>
-
-    <p class="text">
-        Lassen Sie sich überraschen.
-        Unser Omakase-Erlebnis verbindet japanische Tradition,
-        ausgewählte Zutaten und die Kreativität unseres Chefs.
-    </p>
-
-    <div class="omakase-box">
-
-        <h3>Omakase Menu</h3>
-
-        <div class="price">
-            Preis auf Anfrage
-        </div>
-
         <p>
-            Eine besondere Auswahl von Sushi,
-            Sashimi und saisonalen Spezialitäten.
+            Sushi · Sashimi · Ramen · Japanische Küche
         </p>
 
-    </div>
+        <a class="btn btn-gold" href="#menu">
+            SPEISEKARTE
+        </a>
 
-</section>
-
-<section id="menu">
-
-    <div class="subtitle">OUR MENU</div>
-
-    <h2>Speisekarte</h2>
-
-    <div class="menu-grid">
-
-        <div class="menu-card">
-
-            <h3>Nigiri</h3>
-
-            <div class="menu-item">
-                <span>Lachs</span>
-                <span>4,50 €</span>
-            </div>
-
-            <div class="menu-item">
-                <span>Thunfisch</span>
-                <span>5,50 €</span>
-            </div>
-
-            <div class="menu-item">
-                <span>Ebi</span>
-                <span>4,90 €</span>
-            </div>
-
-            <div class="menu-item">
-                <span>Hamachi</span>
-                <span>5,90 €</span>
-            </div>
-
-        </div>
-
-        <div class="menu-card">
-
-            <h3>Maki</h3>
-
-            <div class="menu-item">
-                <span>Avocado Maki</span>
-                <span>6,90 €</span>
-            </div>
-
-            <div class="menu-item">
-                <span>Lachs Maki</span>
-                <span>7,90 €</span>
-            </div>
-
-            <div class="menu-item">
-                <span>Thunfisch Maki</span>
-                <span>8,90 €</span>
-            </div>
-
-        </div>
-
-        <div class="menu-card">
-
-            <h3>Sashimi</h3>
-
-            <div class="menu-item">
-                <span>Lachs Sashimi</span>
-                <span>12,90 €</span>
-            </div>
-
-            <div class="menu-item">
-                <span>Thunfisch Sashimi</span>
-                <span>15,90 €</span>
-            </div>
-
-        </div>
-
-        <div class="menu-card">
-
-            <h3>Specials</h3>
-
-            <div class="menu-item">
-                <span>Chef's Selection</span>
-                <span>auf Anfrage</span>
-            </div>
-
-            <div class="menu-item">
-                <span>Seasonal Special</span>
-                <span>auf Anfrage</span>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section id="gallery">
-
-    <div class="subtitle">IMPRESSIONS</div>
-
-    <h2>Galerie</h2>
-
-    <div class="gallery">
-
-        <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=900&q=85">
-
-        <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=900&q=85">
-
-        <img src="https://images.unsplash.com/photo-1611143669185-af224c5e3252?auto=format&fit=crop&w=900&q=85">
-
-        <img src="https://images.unsplash.com/photo-1563612116625-3012372fccce?auto=format&fit=crop&w=900&q=85">
-
-        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=900&q=85">
-
-        <img src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?auto=format&fit=crop&w=900&q=85">
-
-    </div>
-
-</section>
-
-<section id="reservation" class="reservation">
-
-    <div class="reservation-inner">
-
-        <div class="subtitle">YOUR TABLE</div>
-
-        <h2>Reservieren Sie Ihren Tisch</h2>
-
-        <p class="text" style="margin:auto;">
-            Wir freuen uns auf Ihren Besuch.
-            Reservieren Sie Ihren Tisch telefonisch.
-        </p>
-
-        <br>
-
-        <a class="btn" href="tel:+4960214585897">
-            JETZT RESERVIEREN
+        <a class="btn" href="#contact">
+            KONTAKT
         </a>
 
     </div>
 
 </section>
 
-<section id="contact">
 
-    <div class="contact-box">
+<!-- ABOUT -->
+<section class="about" id="about">
 
-        <div class="subtitle">BESUCHEN SIE UNS</div>
-
-        <h2>Kontakt</h2>
-
-        <p><strong>OMAKASE</strong></p>
-
-        <p>Am Floßhafen 20</p>
-
-        <p>63739 Aschaffenburg</p>
-
-        <p>Deutschland</p>
-
-        <br>
-
-        <p>☎ +49 6021 4585897</p>
-
+    <div class="section-title">
+        <small>Unsere Philosophie</small>
+        <h2>Japanische Tradition</h2>
     </div>
 
-    <div>
+    <div class="about-grid">
 
-        <iframe
-            class="map"
-            src="https://www.google.com/maps?q=Am%20Flo%C3%9Fhafen%2020,%2063739%20Aschaffenburg&output=embed"
-            loading="lazy">
-        </iframe>
+        <img
+        src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?auto=format&fit=crop&w=1200&q=85"
+        alt="Japanisches Sushi">
+
+        <div class="about-text">
+
+            <h3>Willkommen bei OMAKASE</h3>
+
+            <p>
+                OMAKASE steht für authentische japanische Küche,
+                hochwertige Zutaten und besondere Momente.
+            </p>
+
+            <p>
+                Entdecken Sie frisches Sushi, Sashimi,
+                kreative Rolls und aromatische Ramen.
+            </p>
+
+            <p>
+                Unser Ziel ist es, Ihnen ein Stück Japan
+                mitten in Aschaffenburg zu bieten.
+            </p>
+
+            <a class="btn btn-gold" href="#contact">
+                BESUCHEN SIE UNS
+            </a>
+
+        </div>
 
     </div>
 
 </section>
 
+
+<!-- MENU -->
+<section class="menu" id="menu">
+
+    <div class="section-title">
+        <small>Unsere Auswahl</small>
+        <h2>Speisekarte</h2>
+    </div>
+
+    <div class="menu-grid">
+
+        <div class="menu-card">
+
+            <h3>Sushi</h3>
+
+            <div class="menu-item">
+                <span>Salmon Maki</span>
+                <span class="price">6,90 €</span>
+            </div>
+
+            <div class="menu-item">
+                <span>Tuna Maki</span>
+                <span class="price">7,90 €</span>
+            </div>
+
+            <div class="menu-item">
+                <span>Salmon Nigiri</span>
+                <span class="price">4,50 €</span>
+            </div>
+
+            <div class="menu-item">
+                <span>California Roll</span>
+                <span class="price">9,90 €</span>
+            </div>
+
+            <div class="menu-item">
+                <span>Dragon Roll</span>
+                <span class="price">12,90 €</span>
+            </div>
+
+        </div>
+
+
+        <div class="menu-card">
+
+            <h3>Sashimi</h3>
+
+            <div class="menu-item">
+                <span>Salmon Sashimi</span>
+                <span class="price">12,90 €</span>
+            </div>
+
+            <div class="menu-item">
+                <span>Tuna Sashimi</span>
+                <span class="price">14,90 €</span>
+            </div>
+
+            <div class="menu-item">
+                <span>Sashimi Mix</span>
+                <span class="price">19,90 €</span>
+            </div>
+
+            <div class="menu-item">
+                <span>Chef Selection</span>
+                <span class="price">24,90 €</span>
+            </div>
+
+        </div>
+
+
+        <div class="menu-card">
+
+            <h3>Ramen</h3>
+
+            <div class="menu-item">
+                <span>Chicken Ramen</span>
+                <span class="price">13,90 €</span>
+            </div>
+
+            <div class="menu-item">
+                <span>Shoyu Ramen</span>
+                <span class="price">14,90 €</span>
+            </div>
+
+            <div class="menu-item">
+                <span>Miso Ramen</span>
+                <span class="price">14,90 €</span>
+            </div>
+
+            <div class="menu-item">
+                <span>Vegan Ramen</span>
+                <span class="price">13,90 €</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+
+    <div class="section-title">
+        <small>Genuss erleben</small>
+        <h2>Galerie</h2>
+    </div>
+
+    <div class="gallery-grid">
+
+        <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=900&q=85" alt="Sushi">
+
+        <img src="https://images.unsplash.com/photo-1563612116625-3012372fccce?auto=format&fit=crop&w=900&q=85" alt="Sushi">
+
+        <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=900&q=85" alt="Sushi">
+
+        <img src="https://images.unsplash.com/photo-1617196034183-421b4917c92d?auto=format&fit=crop&w=900&q=85" alt="Japanese food">
+
+        <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=900&q=85" alt="Ramen">
+
+        <img src="https://images.unsplash.com/photo-1583623025817-d180a2221d0a?auto=format&fit=crop&w=900&q=85" alt="Japanese restaurant">
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+    <div class="contact-box">
+
+        <h2>OMAKASE</h2>
+
+        <p>Japanisches Restaurant in Aschaffenburg</p>
+
+        <div class="contact-info">
+
+            <p>📍 Aschaffenburg, Bayern</p>
+
+            <p>🍣 Sushi · Sashimi · Ramen</p>
+
+            <p>☎️ Reservierung & Kontakt</p>
+
+        </div>
+
+        <a class="btn btn-gold" href="tel:+496021000000">
+            RESERVIEREN
+        </a>
+
+    </div>
+
+</section>
+
+
 <footer>
 
-    <div class="brand">OMAKASE</div>
-
-    <div>
-        Japanese Dining · Aschaffenburg
-    </div>
-
-    <div class="footer-links">
-        <a href="#">Impressum</a>
-        <a href="#">Datenschutz</a>
-    </div>
-
-    <br>
-
-    © 2026 OMAKASE
+    © 2026 <strong>OMAKASE</strong> · Japanisches Restaurant Aschaffenburg
 
 </footer>
+
 
 </body>
 </html>
