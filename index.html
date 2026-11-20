@@ -131,4 +131,59 @@ Dienstag: Ruhetag<br>
 </div></div></section>
 </main>
 <footer><div class="wrap"><strong>OMAKASE – PREMIUM STEAK &amp; SUSHI</strong><br>Am Floßhafen 20 · 63739 Aschaffenburg · Bayern, Deutschland</div></footer>
+
+<script>
+(function () {
+  const canvas = document.createElement("canvas");
+  canvas.id = "omakase-snow";
+  Object.assign(canvas.style, {
+    position: "fixed",
+    inset: "0",
+    width: "100%",
+    height: "100%",
+    pointerEvents: "none",
+    zIndex: "99999"
+  });
+  document.body.appendChild(canvas);
+
+  const ctx = canvas.getContext("2d");
+  let w, h, flakes = [];
+
+  function resize() {
+    w = canvas.width = window.innerWidth;
+    h = canvas.height = window.innerHeight;
+    flakes = Array.from({length: 65}, () => ({
+      x: Math.random() * w,
+      y: Math.random() * h,
+      r: Math.random() * 2.5 + 1,
+      s: Math.random() * 1.2 + 0.4
+    }));
+  }
+
+  function snow() {
+    ctx.clearRect(0, 0, w, h);
+    ctx.fillStyle = "rgba(255,255,255,0.85)";
+    ctx.beginPath();
+
+    flakes.forEach(f => {
+      ctx.moveTo(f.x, f.y);
+      ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+      f.y += f.s;
+      f.x += Math.sin(f.y / 30) * 0.5;
+
+      if (f.y > h) {
+        f.y = -5;
+        f.x = Math.random() * w;
+      }
+    });
+
+    ctx.fill();
+    requestAnimationFrame(snow);
+  }
+
+  window.addEventListener("resize", resize);
+  resize();
+  snow();
+})();
+</script>
 </body></html>
